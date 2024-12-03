@@ -1,3 +1,3 @@
-from panel_neuroglancer.neuroglancer_nbv import NeuroglancerNbViewer
+from panel_neuroglancer.neuroglancer_nb import NeuroglancerNb
 
-__all__ = ["NeuroglancerNbViewer"]
+__all__ = ["NeuroglancerNb"]
