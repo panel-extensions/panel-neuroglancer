@@ -24,3 +24,7 @@ with viewer.txn() as s:
 NeuroglancerNB(source=viewer, show_state=True)
 ```
 ![](assets/demo_fromviewer.png)
+
+## Funding
+
+- 2024: Chan Zuckerberg Initiative. Learn more in the [grant announcement](https://blog.bokeh.org/announcing-czi-funding-for-bokeh-for-bioscience-5f74426c011a).
