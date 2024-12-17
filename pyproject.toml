@@ -1,10 +1,91 @@
+[build-system]
+requires = ["hatchling", "hatch-vcs", "panel>=1.5.4", "packaging"]
+build-backend = "hatchling.build"
+
 [project]
 name = "panel-neuroglancer"
-version = "0.1.0"
-description = "Add your description here"
+dynamic = ["version"]
+description = "Volumetric data viewer built on HoloViz Panel and Neuroglancer"
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
     "neuroglancer>=2.40.1",
     "panel>=1.5.4",
 ]
+classifiers = [
+  "License :: OSI Approved :: BSD License",
+  "Development Status :: 5 - Production/Stable",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Operating System :: OS Independent",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Science/Research",
+  "Natural Language :: English",
+  "Topic :: Scientific/Engineering",
+  "Topic :: Software Development :: Libraries",
+]
+
+[project.urls]
+Homepage = "https://github.com/panel-extensions/panel-neuroglancer"
+Source = "https://github.com/panel-extensions/panel-neuroglancer"
+
+[tool.ruff]
+exclude = [
+  ".git",
+  "__pycache__",
+  ".tox",
+  ".eggs",
+  "*.egg",
+  "doc",
+  "dist",
+  "build",
+  "_build",
+  "examples",
+  ".ipynb_checkpoints",
+  "node_modules",
+]
+line-length = 165
+fix = true
+
+
+[tool.ruff.lint]
+ignore = [
+  "E402", # Module level import not at top of file
+  "E712", # Avoid equality comparisons to True
+  "E731", # Do not assign a lambda expression, use a def
+  "N803", # Argument name should be lowercase
+  "N806", # Variable name should be lowercase
+]
+select = [
+  "B",      # flake8-bugbear
+  "E",      # pycodestyle errors
+  "F",      # pyflakes
+  "W",      # pycodestyle warnings
+  "I",      # isort
+  "PIE",
+  "T20",
+  "RUF006",
+  "UP004",
+  "UP006",
+  "UP020",
+  "UP028",
+  "UP030",
+  "UP031",
+  "UP032",
+  "UP034",
+  "UP036",
+]
+
+[tool.hatch.version]
+source = "vcs"
+raw-options = { version_scheme = "no-guess-dev" }
+
+[tool.isort]
+force_grid_wrap = 4
+multi_line_output = 5
+combine_as_imports = true
+lines_between_types = 1
+include_trailing_comma = true

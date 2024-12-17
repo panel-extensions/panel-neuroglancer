@@ -3,10 +3,8 @@ from __future__ import annotations
 import neuroglancer
 import panel as pn
 import param
-
 from neuroglancer.viewer import Viewer
 from panel.custom import PyComponent
-
 
 DEMO_URL = "https://neuroglancer-demo.appspot.com/#!%7B%22dimensions%22%3A%7B%22x%22%3A%5B6.000000000000001e-9%2C%22m%22%5D%2C%22y%22%3A%5B6.000000000000001e-9%2C%22m%22%5D%2C%22z%22%3A%5B3.0000000000000004e-8%2C%22m%22%5D%7D%2C%22position%22%3A%5B5029.42333984375%2C6217.5849609375%2C1182.5%5D%2C%22crossSectionScale%22%3A3.7621853549999242%2C%22projectionOrientation%22%3A%5B-0.05179581791162491%2C-0.8017329573631287%2C0.0831851214170456%2C-0.5895944833755493%5D%2C%22projectionScale%22%3A4699.372698097029%2C%22layers%22%3A%5B%7B%22type%22%3A%22image%22%2C%22source%22%3A%22precomputed%3A%2F%2Fgs%3A%2F%2Fneuroglancer-public-data%2Fkasthuri2011%2Fimage%22%2C%22tab%22%3A%22source%22%2C%22name%22%3A%22original-image%22%7D%2C%7B%22type%22%3A%22image%22%2C%22source%22%3A%22precomputed%3A%2F%2Fgs%3A%2F%2Fneuroglancer-public-data%2Fkasthuri2011%2Fimage_color_corrected%22%2C%22tab%22%3A%22source%22%2C%22name%22%3A%22corrected-image%22%7D%2C%7B%22type%22%3A%22segmentation%22%2C%22source%22%3A%22precomputed%3A%2F%2Fgs%3A%2F%2Fneuroglancer-public-data%2Fkasthuri2011%2Fground_truth%22%2C%22tab%22%3A%22source%22%2C%22selectedAlpha%22%3A0.63%2C%22notSelectedAlpha%22%3A0.14%2C%22segments%22%3A%5B%223208%22%2C%224901%22%2C%2213%22%2C%224965%22%2C%224651%22%2C%222282%22%2C%223189%22%2C%223758%22%2C%2215%22%2C%224027%22%2C%223228%22%2C%22444%22%2C%223207%22%2C%223224%22%2C%223710%22%5D%2C%22name%22%3A%22ground_truth%22%7D%5D%2C%22layout%22%3A%224panel%22%7D"
 
@@ -104,7 +102,7 @@ class Neuroglancer(PyComponent):
             new_state = self._parse_state_from_url(url)
             self.viewer.set_state(new_state)
         except Exception as e:
-            print(f"Error loading Neuroglancer state: {e}")
+            print(f"Error loading Neuroglancer state: {e}")  # noqa
 
     def _parse_state_from_url(self, url):
         return neuroglancer.parse_url(url)
