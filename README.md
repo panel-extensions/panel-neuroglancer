@@ -13,6 +13,11 @@ Either use `Neuroglancer(source=<URL>)` or just run `Neuroglancer()` and input t
 ### Option 2 - Load from `neuroglancer.Viewer` instance:
 
 ```python
+import neuroglancer
+import panel as pn
+from panel_neuroglancer import Neuroglancer
+
+pn.extension() # necessary for panel extensions to render in a notebook
 viewer = neuroglancer.Viewer()
 
 with viewer.txn() as s:
