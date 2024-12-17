@@ -57,6 +57,5 @@ default = ["test"]
 py310 = ["py310", "test"]
 py311 = ["py311", "test"]
 py312 = ["py312", "test"]
-test-ui = ["py312", "test", "test-ui"]
 build = ["build"]
 lint = { features = ["lint"], no-default-feature = true }
