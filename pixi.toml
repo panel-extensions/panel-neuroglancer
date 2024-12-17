@@ -10,6 +10,8 @@ postinstall = "pip install --no-build-isolation --no-deps --disable-pip-version-
 python = ">=3.10"
 panel = ">=1.5.4"
 packaging = "*"
+
+[pypi-dependencies]
 neuroglancer = ">=2.40.1"
 
 [host-dependencies]
