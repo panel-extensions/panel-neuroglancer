@@ -1,9 +1,12 @@
-# `panel-neuroglancer` 
+# `panel-neuroglancer`
+
 Use HoloViz [`Panel`](https://panel.holoviz.org/) to integrate [Neuroglancer](https://www.github.com/google/neuroglancer) into Jupyter notebook workflows and applications for scientifically contextualized, reproducible, and extensible workflows involving large volumetric datasets, such as those from electron and fluorescent microscopy. See the [Overview](#overview) below for more explanation.
 
 ## Usage
+
 ### Option 1 - Load from a neuroglancer url:
-Either use `NeuroglancerNB(source=<URL>)` or just run `NeuroglancerNB()` and input the URL in the GUI:
+
+Either use `Neuroglancer(source=<URL>)` or just run `Neuroglancer()` and input the URL in the GUI:
 ![](assets/demo_fromurl.png)
 
 
@@ -21,8 +24,9 @@ with viewer.txn() as s:
     s.layers["segmentation"] = neuroglancer.SegmentationLayer(
         source="precomputed://gs://neuroglancer-janelia-flyem-hemibrain/v1.1/segmentation",
     )
-NeuroglancerNB(source=viewer, show_state=True)
+Neuroglancer(source=viewer, show_state=True)
 ```
+
 ![](assets/demo_fromviewer.png)
 
 ## Overview
