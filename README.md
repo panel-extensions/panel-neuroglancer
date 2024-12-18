@@ -2,6 +2,10 @@
 
 Use HoloViz [`Panel`](https://panel.holoviz.org/) to integrate [Neuroglancer](https://www.github.com/google/neuroglancer) into Jupyter notebook workflows and applications for scientifically contextualized, reproducible, and extensible workflows involving large volumetric datasets, such as those from electron and fluorescent microscopy. See the [Overview](#overview) below for more explanation.
 
+## Install
+
+`pip install panel_neuroglancer`
+
 ## Usage
 
 ### Option 1 - Load from a neuroglancer url:
