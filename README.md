@@ -1,3 +1,5 @@
+> 👉 Check out an example workflow [here](https://examples.holoviz.org/gallery/volumetric_imaging/volumetric_imaging.html).
+
 # `panel-neuroglancer`
 
 Use HoloViz [`Panel`](https://panel.holoviz.org/) to integrate [Neuroglancer](https://www.github.com/google/neuroglancer) into Jupyter notebook workflows and applications for scientifically contextualized, reproducible, and extensible workflows involving large volumetric datasets, such as those from electron and fluorescent microscopy. See the [Overview](#overview) below for more explanation.
